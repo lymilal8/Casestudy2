@@ -1,7 +1,7 @@
 // Task1: initiate app and run server at 3000
 const express=require('express');
 const app = express();
-const PORT=9000;
+const PORT=3000;
 var morgan = require('morgan');
 app.use(morgan('dev'));
 app.use(express.json());
@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname+'/dist/FrontEnd')));
 
 // Task2: create mongoDB connection 
 const mongoose=require('mongoose');
-mongoose.connect('mongodb+srv://lymilal:lymidb@cluster0.bvszxht.mongodb.net/database1')
+mongoose.connect('mongodb+srv://<username>:<password>@cluster0.bvszxht.mongodb.net/<your database name>')
 .then(()=>{
     console.log('db connection sucess')
     
